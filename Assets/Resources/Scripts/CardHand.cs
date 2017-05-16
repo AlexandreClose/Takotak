@@ -46,10 +46,15 @@ public class CardHand : MonoBehaviour {
     public void dropCards()
     {
         //drop the hand
-        int nChild = transform.childCount;
-        for (int i = 0; i < nChild; i++)
+        for (int i = transform.childCount - 1; i >= 0; i--)
         {
-            Destroy(transform.GetChild(i).gameObject);
+            DestroyImmediate(transform.GetChild(i).gameObject);
         }
+    }
+
+    public void dropCard( GameObject card )
+    {
+        //drop a card
+        DestroyImmediate(card);
     }
 }

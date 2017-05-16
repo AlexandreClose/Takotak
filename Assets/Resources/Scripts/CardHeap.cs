@@ -21,7 +21,7 @@ public class CardHeap : MonoBehaviour {
     {
 
         //delete previous card from heap
-        Destroy(transform.GetChild(0).gameObject);
+        DestroyImmediate(transform.GetChild(0).gameObject);
 
         //put new card in heap
         GameObject card = CardGenerator.generateCardWithProperties( properties);

@@ -38,17 +38,15 @@ public class ChooseCard : MonoBehaviour {
                         Vector3 transformHandCard = new Vector3();
                         transformHandCard = card.transform.position;
 
-                        
-
                         //Change card in heap
-                        GameObject.Find("Heap").GetComponent<CardHeap>().changeCard( card.GetComponent<CardProperties>() );
+                        GameObject.Find("Heap").GetComponent<CardHeap>().changeCard(cardProperties);
 
                         //drop targeted card
-                        Destroy(card);
+                        GameObject.Find("Hand").GetComponent<CardHand>().dropCard(card);
+
 
                         //Draw new card in hand. 
                         GameObject.Find("Hand").GetComponent<CardHand>().drawCard(transformHandCard);
-
 
                     }
                     else

@@ -8,7 +8,7 @@ public class CardGenerator : MonoBehaviour {
     public static GameObject prefabCard ;
     public static GameObject prefabSymbol ;
 
-    public static int nMaxSymbol = 3;
+    public static int nMaxSymbol = 4;
 
     //distance entre les symboles 
     public static float dYSymbols = 1.0f;

@@ -15,18 +15,20 @@ public class RecycleCard : MonoBehaviour {
 
         CardProperties[] handCardProperties = GameObject.Find("Hand").GetComponentsInChildren<CardProperties>();
         bool ispossible = false;
+        Debug.Log("HEAP nb sym" + nSymbolsHeap + "  n color" + nColorHeap + " nSymboltype" + nSymbolTypeHeap);
+        int i = 1;
         foreach (CardProperties properties in handCardProperties)
         {
             int nSymbolsHand = properties.nSymbol;
             int nColorHand = properties.nColor;
             int nSymbolTypeHand = properties.nSymbolType;
-            Debug.Log("CARTE : " + nSymbolsHand + " " + nColorHand + " " + nSymbolTypeHand + " ... HEAP " + nSymbolsHeap + " " + nColorHeap + " " + nSymbolTypeHeap);
+            Debug.Log("CARTE "+i+" nb sym" + nSymbolsHand + "  n color" + nColorHand + " nSymboltype" + nSymbolTypeHand);
             if (nSymbolsHand == nSymbolsHeap || nColorHand == nColorHeap || nSymbolTypeHand == nSymbolTypeHeap)
             {
                 ispossible = true;
             }
 
-            
+            i++;   
         }
 
         if (!ispossible)
