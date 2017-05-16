@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/TakotakSoloGame.unity
+  isLoaded: 1
+  isActive: 1
