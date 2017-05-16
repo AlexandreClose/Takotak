@@ -51,6 +51,8 @@ public class ChooseCard : MonoBehaviour {
                     }
                     else
                     {
+                        //Drop life
+                        GameObject.Find("GameplayEngine").GetComponent<Live>().dropLife();
                     }
 
                 }
