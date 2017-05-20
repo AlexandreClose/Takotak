@@ -21,5 +21,9 @@ public class Live : MonoBehaviour {
     {
         GameObject.Find("LifeBar").GetComponent<LifeBar>().dropLife();
         nCurrentLives--;
+        if ( nCurrentLives == 0 )
+        {
+            GameObject.Find("GameStateManager").GetComponent<LoseTakotakSoloGame>().returnToMenu();
+        }
     }
 }

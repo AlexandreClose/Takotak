@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/TakotakSoloGame.unity
+- path: Assets/LossMenu.unity
   isLoaded: 1
   isActive: 1
